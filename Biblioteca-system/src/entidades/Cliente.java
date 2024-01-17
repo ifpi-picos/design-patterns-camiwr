@@ -1,10 +1,13 @@
 package entidades;
 
+import padraoDeProjeto.EstrategiaEmprestimo;
+
 public class Cliente {
     private int idUsuario;
     private String nome;
     private String email;
     private String endereço;
+    private EstrategiaEmprestimo estrategiaEmprestimo;
 
     public Cliente(int idUsuario, String nome, String email, String endereço) {
         this.idUsuario = idUsuario;
@@ -44,4 +47,16 @@ public class Cliente {
     public void setEndereço(String endereço) {
         this.endereço = endereço;
     }
+    public void setEstrategiaEmprestimo(EstrategiaEmprestimo estrategiaEmprestimo) {
+        this.estrategiaEmprestimo = estrategiaEmprestimo;
+    }
+    
+    public void realizarEmprestimo(Livro livro) {
+        if (estrategiaEmprestimo != null) {
+            estrategiaEmprestimo.realizarEmprestimo(this, livro);
+        } else {
+            System.out.println("Erro: Estratégia de empréstimo não definida para " + nome);
+        }
+    }
+    
 }

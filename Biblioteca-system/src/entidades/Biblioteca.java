@@ -62,18 +62,18 @@ public class Biblioteca {
     }
 
     public void listarLivrosEmprestados() {
-        System.out.println("Livros Atualmente Emprestados:");
+        System.out.println("----- Livros Atualmente Emprestados: -----");
         for (Livro livro : livros) {
             if (!livro.isDisponivel()) {
-                System.out.println("- " + livro.getTitulo() + " emprestado.");
+                System.out.println("- " + livro.getTitulo() + "  emprestado.");
             }
         }
     }
-
+ 
     // * metodos para clientes
 
     public void listarClientes() {
-        System.out.println("Clientes Cadastrados na Biblioteca:");
+        System.out.println("----- Clientes Cadastrados na Biblioteca: -----");
         for (Cliente cliente : clientes) {
             System.out.println("- " + cliente.getNome());
         }

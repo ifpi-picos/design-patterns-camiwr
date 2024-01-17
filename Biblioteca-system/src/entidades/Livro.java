@@ -5,13 +5,15 @@ public class Livro {
     private String titulo;
     private String autor;
     private int anoPublicacao;
+    private boolean bestSeller;
     private boolean disponivel; // criar enum 
 
-    public Livro(int idLivro, String titulo, String autor, int anoPublicacao, boolean disponivel) {
+    public Livro(int idLivro, String titulo, String autor, int anoPublicacao, boolean bestSeller, boolean disponivel) {
         this.idLivro = idLivro;
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
+        this.bestSeller = true;
         this.disponivel = true;
     }
 
@@ -47,6 +49,15 @@ public class Livro {
         this.anoPublicacao = anoPublicacao;
     }
 
+    public boolean isBestSeller() {
+        return bestSeller;
+    }
+    public void setBestSeller(boolean bestSeller) {
+        this.bestSeller = bestSeller;
+    }
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
     public boolean isDisponivel() {
         return disponivel;
     }
