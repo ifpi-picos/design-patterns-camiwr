@@ -6,7 +6,7 @@ public class Livro {
     private String autor;
     private int anoPublicacao;
     private boolean bestSeller;
-    private boolean disponivel; // criar enum 
+    private boolean disponivel; 
 
     public Livro(int idLivro, String titulo, String autor, int anoPublicacao, boolean bestSeller, boolean disponivel) {
         this.idLivro = idLivro;

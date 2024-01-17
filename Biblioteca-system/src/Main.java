@@ -5,7 +5,7 @@ import padraoDeProjeto.EmprestimoBestSeller;
 import padraoDeProjeto.EmprestimoPorPeriodo;
 import padraoDeProjeto.EmprestimoPremium;
 
-public class App {
+public class Main {
     public static void main(String[] args) throws Exception {
         Biblioteca biblioteca = new Biblioteca();
 
@@ -28,9 +28,12 @@ public class App {
         // biblioteca.realizarDevolucao(livro2);
 
         //cliente1.setEstrategiaEmprestimo(new EmprestimoPorPeriodo());
-        //cliente1.setEstrategiaEmprestimo(new EmprestimoBestSeller());
+        cliente1.setEstrategiaEmprestimo(new EmprestimoBestSeller());
         //cliente1.setEstrategiaEmprestimo(new EmprestimoPremium());
+
         cliente1.realizarEmprestimo(livroBestSeller);
+
+        livroBestSeller.devolverLivro();
         // biblioteca.listarClientes();
         //biblioteca.listarLivrosDisponiveis();
      
